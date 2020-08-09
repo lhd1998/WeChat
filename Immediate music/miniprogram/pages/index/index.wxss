@@ -1,0 +1,174 @@
+/* miniprogram/pages/index/index.wxss */
+/* 顶部导航 */
+.nav{
+  font-size: 30rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70rpx;
+  padding: 15rpx 0;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  z-index: 10;
+  background-color: #fff;
+}
+.nav .nav-txt{
+  width: 30%;
+  text-align: center;
+}
+.nav .nav-txt .reco{
+  color: #d43c33;
+}
+/* 轮播 */
+.swiper {
+  height: 400rpx;
+  width: 100%;
+}
+.swiper image {
+  height: 100%;
+  width: 100%;
+}
+/* 推荐歌单 */
+.content{
+  margin-top: 70rpx;
+}
+.content .reco{
+  margin: 40rpx 0;
+}
+.head-txt .ic{
+  display: inline-block;
+  width: 4rpx;
+  height: 25rpx;
+  background-color: #d43c33;
+  margin-right: 20rpx;
+}
+.content .box{
+  width: 100%;
+  overflow: hidden;
+  margin-top:20rpx ;
+}
+.content .box .box1{
+  width: 100%;
+  overflow: hidden;
+  padding: 0 2%;
+}
+.content .box .box1 .box-cont{
+  width: 30%;
+  height: 300rpx;
+  float: left;
+  margin: 1% 1%;
+  position: relative;
+}
+.content .box .box1 .box-cont .img{
+  width: 100%;
+  border-radius: 15rpx;
+}
+.content .box  .box-cont .img-ico{
+  position: absolute;
+  color: #fff;
+  font-size: 22rpx;
+  top: 10rpx;
+  right: 20rpx;
+  /* width: 55%; */
+}
+.content .box .box-cont .img-ico .ico{
+  width:20rpx;
+}
+.content .box .box-cont .text{
+  padding: 0 10rpx;
+  font-size: 25rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/* 新歌 */
+.scroll_box{
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+  margin-top: 20rpx;
+  background: #fff;
+  white-space: nowrap;
+}
+.scroll_box scroll-view{
+  height: 100%;
+  width: auto;
+  overflow:hidden;
+}
+.item_list{
+  width: 240rpx;
+  height: 100%;
+  margin-right: 10rpx;
+  display: inline-block;
+  margin-left: 10rpx;
+  position: relative;
+}
+.item_list .img{
+  width: 240rpx;
+  height: 240rpx;
+  border-radius: 15rpx;
+}
+.item_list .text{
+  padding: 0 10rpx;
+  height: 70rpx;
+  font-size: 25rpx;
+  /* display: -webkit-box; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* word-wrap: break-word; */
+  /* white-space: normal !important; */
+  /* -webkit-line-clamp: 2; */
+  /* -webkit-box-orient: vertical; */
+}
+/* 推荐单曲 */
+.sing{
+  overflow: hidden;
+}
+.sing-t{
+  margin-bottom: 40rpx;
+}
+.sing-box{
+  width: 100%;
+  padding:16rpx 40rpx ;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.329) ;
+  overflow: hidden;
+  position: relative;
+}
+.sing-box .sing-use{
+  font-size: 25rpx;
+  margin-top: 6rpx;
+}
+.sing-box .sing-play{
+  width: 55rpx;
+  position: absolute;
+  top: 35rpx;
+  right: 40rpx;
+}
+.sing-box .sing-txt{
+  padding-right: 50rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.sing-box .sing-use .sing-sq{
+  width: 30rpx;
+}
+/* 尾部 */
+.botm{
+  width: 100%;
+  margin: 100rpx 0;
+  font-size: 50rpx;
+  color: #d43c33;
+  text-align: center;
+  font-weight: 1000;
+  letter-spacing: 40rpx;
+}

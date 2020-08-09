@@ -1,0 +1,23 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/hot/hot",
+    "pages/play/play",
+    "pages/search/search",
+    "pages/lists/lists",
+    "pages/album/album"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#d43c33",
+    "navigationBarTitleText": "拾刻音乐",
+    "navigationBarTextStyle": "white",
+    "backgroundColorTop":"#d43c33"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "requiredBackgroundModes": [
+    "audio"
+  ]
+}

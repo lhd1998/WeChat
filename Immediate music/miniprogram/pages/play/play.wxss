@@ -1,0 +1,75 @@
+/* pages/play/play.wxss */
+page{
+  height:100%;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+  filter: blur(20px);
+  transform: scale(1.2);
+}
+/* 音乐控制 */
+.play{
+  width: 100%;
+  height: 800rpx;
+  text-align: center;
+  position: relative;
+}
+.play .play-bot{
+  width: 600rpx;
+  height: 600rpx;
+  /* margin-top: 120rpx; */
+  position: absolute;
+  top: 120rpx;
+  left: 80rpx;
+  z-index: 2;
+}
+.play .play-top{
+  width: 200rpx;
+  position: absolute;
+  top: 0;
+  left: 350rpx;
+  z-index: 10;
+}
+.play .play-muis{
+  width: 400rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 220rpx;
+  left: 180rpx;
+  z-index: 0;
+}
+.play .play-p{
+  width: 150rpx;
+  position: absolute;
+  top: 340rpx;
+  left: 300rpx;
+  z-index: 10;
+}
+.play .play-bak{
+  width: 400rpx;
+  border-radius: 50%;
+  position: absolute;
+  top: 220rpx;
+  left: 180rpx;
+  z-index: 0;
+}
+.contentText{
+  line-height: 60rpx;
+  color: #fff;
+}
+.currentTime{
+  color:#ff3a3a;
+  font-weight: 950;
+}
+.mname{
+  text-align: center;
+  font-weight:950 ;
+  color: #fff;
+  font-size: 40rpx;
+  margin-bottom: 40rpx;
+  margin-top: -40rpx;
+}

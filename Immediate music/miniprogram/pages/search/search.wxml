@@ -1,0 +1,34 @@
+<!--pages/search/search.wxml-->
+<!-- <text>pages/search/search.wxml</text> -->
+<!-- 头部导航 -->
+  <view class="nav">
+    <view class="nav-txt">
+      <view class="reco"><navigator url="../index/index" open-type="redirect">推荐音乐</navigator></view>
+    </view>
+    <view class="nav-txt">
+      <view class="hot"><navigator url="../hot/hot" open-type="redirect">热歌榜</navigator></view>
+    </view>
+    <view class="nav-txt">
+      <view class="search">搜索</view>
+    </view>
+  </view>
+  <!-- 内容 -->
+  <view class="content">
+    <!-- 搜索框 -->
+    <view class="sea">
+      <input class="ipt" placeholder="搜索歌曲，歌手，专辑" placeholder-class="pla" bindblur="getdata"></input>
+      <image class="sec" src="../../images/sec.png" mode="widthFix"></image>
+    </view>
+    <!-- 检索到的信息 -->
+    <view class="sing"> 
+      <!-- 单曲列表 -->
+      <view class="sing-box" wx:for="{{sear}}" wx:key="index"  data-src="{{item.url}}" data-img="{{item.album.picUrl}}" data-name="{{item.name}}" data-cid="{{item.cid}}" bindtap="getsrc">
+        <!-- <view class="num {{index<3?'red':''}}" >{{index<9?'0':''}}{{index+1}}</view> -->
+        <view class="sing-txt">{{item.name}}</view>
+        <view class="sing-use">
+          <image src="../../images/sq.png" mode="widthFix" class="sing-sq"></image>
+        {{item.artists[0].name}}</view>
+        <image class="sing-play" src="../../images/sing-p.png"  mode="widthFix"></image>
+      </view>
+    </view>
+  </view>

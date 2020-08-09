@@ -1,0 +1,125 @@
+/* pages/lists/lists.wxss */
+.header{
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+  padding: 50rpx 40rpx;
+  box-sizing: border-box;
+}
+.header .head-img{
+  width: 100%;
+  height: 350rpx;
+  position:fixed; 
+  background-size:100% 100%;
+  z-index: -1;
+  filter: blur(30px);
+  transform: scale(1.2);
+}
+.use{
+  float: left;
+  margin-right: 40rpx;
+  position: relative;
+}
+.use .use-img{
+  width: 250rpx;
+}
+.img-ico{
+  /* width: 55%; */
+  position: absolute;
+  top: 20rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+  color: #fff;
+}
+.img-ico .ico{
+  width: 25rpx;
+}
+.txt{
+  width: 350rpx;
+  height: 250rpx;
+  font-size: 40rpx;
+  font-weight: 950;
+  float: left;
+  color: #fff;
+}
+/* 介绍 */
+.cont{
+  width: 100%;
+  /* max-height: 300rpx; */
+  background-color: #fff;
+  padding: 30rpx 30rpx;
+  line-height: 40rpx;
+  color: #666;
+}
+.tab{
+  overflow: hidden;
+}
+.tab .t-txt{
+  float: left;
+}
+.cont .tab .tt{
+  /* width: 80rpx; */
+  padding: 0 20rpx;
+  height: 40rpx;
+  float: left;
+  font-size: 26rpx;
+  border: 1px solid #ccc;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 40rpx;
+  margin-right: 20rpx;
+}
+.cont .text{
+  font-size: 30rpx;
+  margin-top: 25rpx;
+  margin-right: 40rpx;
+}
+/* 单曲列表 */
+.sing{
+  overflow: hidden;
+  background-color: #fff;
+}
+.sing-t{
+  margin-bottom: 40rpx;
+}
+.sing-box{
+  width: 100%;
+  padding:16rpx 40rpx  16rpx 90rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.329) ;
+  overflow: hidden;
+  position: relative;
+}
+.sing-box .sing-use{
+  font-size: 25rpx;
+  margin-top: 6rpx;
+  color: #999;
+}
+.sing-box .sing-play{
+  width: 55rpx;
+  position: absolute;
+  top: 35rpx;
+  right: 40rpx;
+}
+.sing-box .sing-txt{
+  padding-right: 50rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.sing-box .sing-use .sing-sq{
+  width: 30rpx;
+}
+.num{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  color: #999;
+}
+.red{
+  color:#df3436;
+}

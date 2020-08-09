@@ -1,0 +1,87 @@
+/* pages/hot/hot.wxss */
+/* 顶部导航 */
+.nav{
+  font-size: 30rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70rpx;
+  padding: 15rpx 0;
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  z-index: 10;
+  background-color: #fff;
+}
+.nav .nav-txt{
+  width: 30%;
+  text-align: center;
+}
+.nav .nav-txt .hot{
+  color: #d43c33;
+}
+/* 头部 */
+.head{
+  position: relative;
+  overflow: hidden;
+}
+.head .head-bak{
+  width: 100%;
+  margin-top: 70rpx;
+}
+.head .txt{
+  width: 40%;
+  position: absolute;
+  top: 120rpx;
+  left: 60rpx;
+}
+/* 单曲列表 */
+.sing{
+  overflow: hidden;
+}
+.sing-t{
+  margin-bottom: 40rpx;
+}
+.sing-box{
+  width: 100%;
+  padding:16rpx 40rpx  16rpx 90rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid rgba(204, 204, 204, 0.329) ;
+  overflow: hidden;
+  position: relative;
+}
+.sing-box .sing-use{
+  font-size: 25rpx;
+  margin-top: 6rpx;
+  color: #999;
+}
+.sing-box .sing-play{
+  width: 55rpx;
+  position: absolute;
+  top: 35rpx;
+  right: 40rpx;
+}
+.sing-box .sing-txt{
+  padding-right: 50rpx;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  white-space: normal !important;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+}
+.sing-box .sing-use .sing-sq{
+  width: 30rpx;
+}
+.num{
+  position: absolute;
+  top: 30rpx;
+  left: 30rpx;
+  color: #999;
+}
+.red{
+  color:#df3436;
+}

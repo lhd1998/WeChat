@@ -1,0 +1,34 @@
+<!--pages/hot/hot.wxml-->
+<!-- <text>热门</text> -->
+<!-- 头部导航 -->
+  <view class="nav">
+    <view class="nav-txt">
+      <view class="reco"><navigator url="../index/index" open-type="redirect">推荐音乐</navigator></view>
+    </view>
+    <view class="nav-txt">
+      <view class="hot">热歌榜</view>
+    </view>
+    <view class="nav-txt">
+      <view class="search"><navigator url="../search/search" open-type="redirect">搜索</navigator></view>
+    </view>
+  </view>
+<!-- 内容 -->
+<view class="content">
+<!-- 头部图片 -->
+  <view class="head">
+    <image class="head-bak" src="../../images/back-hot.jpg" mode="widthFix"></image>
+    <image class="txt" src="../../images/txt.png" mode="widthFix"></image>
+  </view>
+  <!-- 内容列表 -->
+  <view class="sing"> 
+    <!-- 单曲列表 -->
+    <view class="sing-box" wx:for="{{news}}" wx:key="index"  data-src="{{item.url}}" data-img="{{item.picUrl}}" data-name="{{item.name}}" data-cid="{{item.cid}}" bindtap="getsrc">
+      <view class="num {{index<3?'red':''}}" >{{index<9?'0':''}}{{index+1}}</view>
+      <view class="sing-txt">{{item.name}}</view>
+      <view class="sing-use">
+        <image src="../../images/sq.png" mode="widthFix" class="sing-sq"></image>
+      {{item.artists[0].name}}</view>
+      <image class="sing-play" src="../../images/sing-p.png"  mode="widthFix"></image>
+    </view>
+  </view>
+</view>

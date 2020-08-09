@@ -1,0 +1,25 @@
+<!--pages/play/play.wxml-->
+<!-- <text>pages/play/play.wxml</text> -->
+<!-- 播放 -->
+<view class="content">
+  <!-- 背景图 -->
+  <image class='background' src="{{img}}" mode="aspectFill"></image>
+  <!-- 音乐控制 -->
+  <view class="play">
+    <image class="play-top" src="../../images/zen.png" mode="widthFix"></image>
+    <image class="play-bak" src="../../images/bul.png" mode="widthFix"></image>
+    <image class="play-bot" src="../../images/bu.png" mode="widthFix" bindtap="stop"></image>
+    <!-- 封面 -->
+    <image class="play-muis" src="{{img}}" mode="widthFix"  animation="{{animation}}" ></image>
+    <image class="play-p" src="../../images/play.png" mode="widthFix" bindtap="play" wx:if="{{show==0}}"></image>
+  </view>
+  <view class="mname">{{name}}</view>
+  <!-- 歌词 -->
+  <scroll-view  scroll-y="true" scroll-with-animation='true' scroll-top='{{marginTop}}' style="height: 350rpx">
+      <view class='contentText'>
+           <block wx:for='{{storyContent}}' wx:key="index">
+               <text class="{{currentIndex222 == index ? 'currentTime' : ''}}" style="display: block; text-align: center">{{item[1]}}</text>
+            </block>
+       </view>
+</scroll-view>
+</view>

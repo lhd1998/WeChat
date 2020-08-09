@@ -1,0 +1,30 @@
+<!--pages/album/album.wxml-->
+<!-- <text>pages/album/album.wxml</text> -->
+<!-- 顶部图片 -->
+<view class="header">
+  <image class="head-img" src="{{use.picUrl}}" ></image>
+  <view class="use">
+    <image class="use-img" src="{{use.picUrl}}" mode="widthFix"></image>
+  </view>
+  <view class="txt">{{use.name}}</view>
+</view>
+<!-- 介绍 --> 
+<view class="cont">
+  <view class="tab">
+    <text class="t-txt">标签：</text>
+    <view class="tt">{{use.company}}</view>
+  </view>
+  <view class="text">{{use.desc}}</view>
+</view>
+ <!-- 内容列表 -->
+  <view class="sing"> 
+    <!-- 单曲列表 -->
+    <view class="sing-box" wx:for="{{mus}}" wx:key="index"  data-src="{{item.url}}" data-img="{{item.picUrl}}" data-name="{{item.name}}" data-cid="{{item.cid}}" bindtap="getsrc">
+      <view class="num" >{{index<9?'0':''}}{{index+1}}</view>
+      <view class="sing-txt">{{item.name}}</view>
+      <view class="sing-use">
+        <image src="../../images/sq.png" mode="widthFix" class="sing-sq"></image>
+      {{item.artists[0].name}}</view>
+      <image class="sing-play" src="../../images/sing-p.png"  mode="widthFix"></image>
+    </view>
+  </view>

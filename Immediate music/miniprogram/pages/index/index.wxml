@@ -1,0 +1,104 @@
+<!--miniprogram/pages/index/index.wxml-->
+<!-- <text>音乐</text> -->
+<!-- 头部导航 -->
+  <view class="nav">
+    <view class="nav-txt">
+      <view class="reco">推荐音乐</view>
+    </view>
+    <view class="nav-txt">
+      <view class="hot"><navigator url="../hot/hot" open-type="redirect">热歌榜</navigator></view>
+    </view>
+    <view class="nav-txt">
+      <view class="search"><navigator url="../search/search" open-type="redirect">搜索</navigator></view>
+    </view>
+  </view>
+<!-- 内容 -->
+<view class="content">
+<!-- 轮播 -->
+<view class="container">
+  <swiper class="swiper" indicator-dots="true" autoplay="true" interval="5000" duration="1000">  
+      <block wx:for="{{swpers}}" wx:for-index="index" wx:key="index">  
+        <swiper-item>  
+          <image src="{{item.picUrl}}" bindtap="getalb" data-id="{{item.id}}" class="slide-image" mode="aspectFill"/>  
+        </swiper-item>  
+      </block>  
+    </swiper>
+</view>
+
+<!-- 推荐歌单 -->
+  <view class="reco">
+    <view class="head-txt">
+      <view class="ic"></view>
+      推荐歌单
+    </view>
+    <view class="box"> 
+      <view class="box1">
+        <view class="box-cont" wx:for="{{reco}}" wx:key="index" wx:if="{{index<6}}" bindtap="getlist" data-id="{{item.id}}" data-num="{{item.playCount}}">
+          <image src="{{item.picUrl}}" class="img" mode="widthFix"></image>
+          <view class="img-ico">
+            <image src="../../images/erj.svg" mode="widthFix" class="ico"></image>
+            {{item.playCount}}
+          </view>
+          <view class="text">
+            <text>{{item.name}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 新歌 -->
+  <view class="news">
+    <view class="head-txt">
+      <view class="ic"></view>
+      新歌
+    </view>
+    <view class="scroll_box"> 
+        <scroll-view scroll-x>
+          <view class="item_list" wx:for="{{news}}" wx:key="index" data-src="{{item.url}}" data-name="{{item.name}}" data-img="{{item.picUrl}}" data-cid="{{item.cid}}" bindtap="getsrc">
+            <image src="{{item.picUrl}}" class="img" mode="widthFix"></image>
+            <view class="text">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+  </view>
+  <!-- 新专辑 -->
+  <view class="news">
+    <view class="head-txt">
+      <view class="ic"></view>
+      新专辑
+    </view>
+    <view class="scroll_box"> 
+        <scroll-view scroll-x>
+          <view class="item_list" wx:for="{{swpers}}" wx:key="index" bindtap="getalb" data-id="{{item.id}}">
+            <image src="{{item.picUrl}}" class="img" mode="widthFix"></image>
+            <view class="text">
+              <text>{{item.name}}</text>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+  </view>
+  <!-- 推荐单曲 -->
+  <view class="sing"> 
+    <view class="head-txt sing-t">
+      <view class="ic"></view>
+      推荐单曲
+    </view>
+    <!-- 单曲列表 -->
+    <view class="sing-box" wx:for="{{news}}" wx:key="index"  data-src="{{item.url}}" data-img="{{item.picUrl}}" data-name="{{item.name}}" data-cid="{{item.cid}}" bindtap="getsrc">
+      <view class="sing-txt">{{item.name}}</view>
+      <view class="sing-use">
+        <image src="../../images/sq.png" mode="widthFix" class="sing-sq"></image>
+      {{item.artists[0].name}}</view>
+      <image class="sing-play" src="../../images/sing-p.png"  mode="widthFix"></image>
+    </view>
+  </view>
+<!-- 尾部 -->
+<view class="botm">
+  云音乐
+</view>
+
+
+</view>
